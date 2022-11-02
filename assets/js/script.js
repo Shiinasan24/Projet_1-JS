@@ -1,39 +1,71 @@
 
-// ------------- VARIABLES ------------- //
+// ----------------------- VARIABLES ----------------------- //
 
-// Menu Burger ---
+// var - Menu Burger :
 
 const menuBurger = document.querySelector(".burger");
 const navMobile = document.querySelector(".navMobile");
 menuBurger.addEventListener("click", displayNav);
 
-// Age Prompt --- 
+// var - Country :
 
-const bodyDisplay = document.querySelector("body")
-const bodyHide = document.querySelector(".hide")
+const age = document.querySelector("#ageInput")
+const country = document.querySelector("#countrySelect");
+const btnAgePrompt = document.querySelector("#btnAgePrompt");
+btnAgePrompt.addEventListener("click", agePrompt);
 
-// ------------- FUNCTIONS ------------- //
+// -- FR --
+const whatAgeFr = "Quel est votre age ?";
+const legalAgeFr = 18;
+const isFrLegal = " ans ? C'est bon tu peux entrer.";
+const isFrNotLegal = " ans ? T'es trop jeune pour entrer.";
 
-// navMobile DISPLAY ON BURGER CLICK ---
+// -- JP --
+const whatAgeJp = "何歳ですか";
+const legalAgeJp = 20;
+const isJpLegal = "それは良いです.";
+const isJpNotLegal = "若すぎる.";
+
+// -- US --
+const whatAgeUs = "How old are you ?";
+const legalAgeUs = 21;
+const isUsLegal = " years old ? You're good to go.";
+const isUsNotLegal = " years old ? Turn around, you're too young.";
+
+
+// ----------------------- FUNCTIONS ----------------------- //
+
+// Fn - navMobile DISPLAY ON BURGER CLICK :
 function displayNav() {
     navMobile.classList.toggle("toggleDisplay");
 }
 
-// agePrompt when entering website ---
-function agePrompt() {
-
-    const age = prompt("Quel est votre age ?");
-
-    if (age < 18) {
-        alert(age + " ans ? Y'a rien à voir ici pour toi, kiddo.");
-    } else {
-        alert(age + " ans ? Enjoy.");
-        bodyDisplay.classList.remove("hide")
-    }
-}
+function agePrompt() {  
 
 
-// ------------- FUNCTION CALLS ------------- //
+    if (country.value == "FR") {
+        if (age.value < legalAgeFr) {
+            alert(age.value + isFrNotLegal);
+        } else {
+            alert(age.value + isFrLegal)
+        } 
+    } else if (country.value == "JP") {
+        if (age.value < legalAgeJp) {
+            alert(age.value + isJpNotLegal)
+        } else {
+            alert(age.value + isJpLegal)
+        } 
+    } else if (country.value == "US") {
+        if (age.value < legalAgeUs) {
+            alert(age.value + isUsNotLegal)
+        } else {
+            alert(age.value + isUsLegal)
+        } 
+    } 
+}   
 
-// Asking for age when entering website ---
-agePrompt()
+
+// ----------------------- FUNCTION CALLS ----------------------- //
+
+// Fc - Asking for age when entering website :
+// agePrompt("JP")

@@ -8,6 +8,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 a {
@@ -17,6 +18,7 @@ a {
 .hide {
     display: none;
 }
+
 
 
 /* --------------------------- HEADER --------------------------- 
@@ -114,10 +116,83 @@ header img {
 /* ----------------------- MAIN ----------------------- 
 */
 
-main {
-    background-color: grey;
-    height: 500px;
+.sectContainer {
+    background-color: rgb(187, 187, 187);
     margin: 2rem 0;
+    width: fit-content;
+    margin: 5rem auto;
+    padding: 2rem 5rem;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 1px 1px 15px 15px;
+    box-shadow: 0 2px 10px -0.5px #000000;
+}
+
+h2 {
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    background-color: bisque;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px -0.5px #000000;
+}
+
+
+/* ----- SECTION 1 ----- */
+.containerFlex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 3rem 0;
+    background-color: rgb(125, 125, 125);
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px -0.5px #000000;
+}
+
+input {
+    text-align: center;
+}
+
+label {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+form label:last-child {
+    margin-top: 1rem;
+}
+
+#btnAgePrompt {
+    width: 120px;
+    height: 50px;
+    color: white;
+    background-color: rgba(153, 13, 13, 0.856);
+    border: solid 1px white;
+    border-radius: 10px;
+    box-shadow: 0 1px 15.5px 5px #000000, inset 0 1px 13.5px -0.5px #000000;
+    font-weight: 900;
+    margin: 1rem 0;
+    transition: all ease-in-out .04s;
+    cursor: pointer;
+}
+
+#btnAgePrompt:active {
+    box-shadow: 0 0px 0px 0px #000000, inset 0 1px 13.5px -0.5px #000000;
 }
 
 
