@@ -198,6 +198,32 @@ form label:last-child {
 
 /* ----- SECTION 2 ----- */
 
+#btnStartMiniJeu {
+    padding: 1em 2em;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: solid 2px white;
+    box-shadow: 0 1px 10px 3px #000000, inset 0 1px 13.5px -0.5px #000000;
+}
+
+#btnCloseMiniJeu {
+    padding: 1em 2em;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: solid 2px white;
+    box-shadow: 0 1px 10px 3px #000000, inset 0 1px 13.5px -0.5px #000000;
+}
+
+#btnStartMiniJeu:active {
+    box-shadow: 0 0px 0px 0px #000000, inset 0 1px 13.5px -0.5px #000000;
+}
+
 #containerCenter {
     width: 100%;
     display: flex;
