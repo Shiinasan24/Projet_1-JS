@@ -48,15 +48,16 @@
 
     <main>
         
+        <!-- SECTION 1 -->
         <section>
             <div class="sectContainer">
-
-                <h2>Activation du Script :</h2>
+            
+                <h2>Activation du Script</h2>
                 <div class="containerFlex">
                     <form id="form">
                         
                         <label for="ageInput">Entrez votre âge : </label>
-                        <input type="text" id="ageInput" name="name" placeholder="Entrez votre âge ici...">
+                        <input type="text" id="ageInput" name="name" placeholder="Entrez votre âge ici ...">
                         
                         <label for="country">Selectionnez votre pays : </label>
                         <select name="country" id="countrySelect">
@@ -70,15 +71,44 @@
                         <button id="btnAgePrompt" type="button">Envoyer</button>
 
                     </form>
+                    <span class="legalResponse"></span>
                 </div>
                 
             </div>
         </section>
 
+        <!-- SECTION 2 -->
         <section>
-            <div class="sectContainer">
+            <div class="sectContainer" id="section2">
 
                 <h2>Section 2</h2>
+
+                <button id="btnStartMiniJeu">Start</button>
+
+                <div id="containerCenter">
+                    <div class="container_chara">
+
+                        <!-- Chara 1 -->
+                        <div>
+                            <p class="redColor">Joueur 1</p>
+                            <div class="characters chara1BaseRed" id="chara1"></div>
+                            <div class="redColor" id="numberDrawnRed">Numéro tiré : </div>
+                        </div>
+
+                        <div class="containerColumn">
+                            <label id="scoreLabel" for="score">Score :</label>
+                            <div id="score" name="score"><span id="scoreRed">0</span> - <span id="scoreBlue">0</span></div>
+                            <h3 id="numberToBeFound">0</h3>
+                        </div>
+
+                        <!-- Chara 2 -->
+                        <div>
+                            <p class="blueColor">Joueur 2</p>
+                            <div class="characters chara2BaseBlue" id="chara2"></div>
+                            <div class="blueColor" id="numberDrawnBlue">Numéro tiré : </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -86,6 +116,7 @@
 
         </section>
 
+        <!-- SECTION 3 -->
         <section>
             <div class="sectContainer">
 
